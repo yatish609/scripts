@@ -22,7 +22,9 @@ git config --global credential.helper store
 sudo apt install gnome-tweaks, ubuntu-restricted-extras
 
 # Installs AptX, LDAC and other proprietary bluetooth codecs
-bash aptx
+sudo add-apt-repository ppa:berglh/pulseaudio-a2dp
+sudo apt update
+sudo apt install pulseaudio-modules-bt libldac
 
 echo "################# SOFTWARE ####################"
 
