@@ -12,3 +12,10 @@ sudo apt install brave-browser
 
 # Install PyQt5 stuff
 sudo apt install pyqt5-dev-tools qttools5-dev-tools
+
+# Install zsh
+sudo apt install zsh zsh-autosuggestions
+chsh -s /bin/zsh
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+source ~/.zshrc
