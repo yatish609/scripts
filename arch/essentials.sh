@@ -4,16 +4,11 @@
 
 echo "Installing for Arch"
 
-
 echo "#################### SYSTEM IMPROVEMENTS #####################"
 
-echo "Tweaking system for personal use!"
-
-#Install reflector
-sudo pacman -S --noconfirm reflector
-sudo reflector -c India -c China -c Singapore --sort rate --save /etc/pacman.d/mirrorlist
-
-#Syncing mirrors and database with repos and updating packages
+# Copy Mirrorlist
+sudo rm -rf /etc/pacman.d/mirrorlist
+sudo cp mirrorlist /etc/pacman.d/mirrorlist
 sudo pacman -Syyu
 
 # Installing yay
@@ -28,8 +23,8 @@ sudo pacman -S --noconfirm apparmor pkgfile vulkan-tools mesa-demos
 sudo pkgfile --update
 
 #Install pip
-echo "Installing Pip2 and Pip3"
-sudo pacman -S --noconfirm python-pip python2-pip
+echo "Installing Pip3"
+sudo pacman -S --noconfirm python-pip
 
 #Install essential fonts
 sudo pacman -S --noconfirm ttf-droid ttf-bitstream-vera evolution-data-server ttf-liberation noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-fira-sans ttf-fira-mono
