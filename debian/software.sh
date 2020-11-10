@@ -16,6 +16,14 @@ sudo apt install pyqt5-dev-tools qttools5-dev-tools
 # Install zsh
 sudo apt install zsh zsh-autosuggestions
 chsh -s /bin/zsh
+
+# Oh-my-zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-source ~/.zshrc
+
+# zsh-autosuggestions a.k.a autocomplete
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Powerlevel10k for Oh-my-zsh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+sudo sed -i 's/default-sample-format = s16le/default-sample-format = float32le/g' ~/.zshrc
