@@ -6,10 +6,7 @@ echo "Installing for Arch"
 
 echo "#################### SYSTEM IMPROVEMENTS #####################"
 
-# Copy Mirrorlist
-sudo rm -rf /etc/pacman.d/mirrorlist
-sudo cp mirrorlist /etc/pacman.d/mirrorlist
-sudo pacman -Syyu
+sudo pacman -Syu # Sync mirrors and update packages
 
 # Installing yay
 git clone https://aur.archlinux.org/yay.git
