@@ -3,17 +3,10 @@
 echo "################### WELCOME TO SOFTWARE INSTALLATION SCRIPT #########################"
 
 # Install Pacman Stuff
-sudo pacman -S --noconfirm chromium ranger qbittorrent vlc telegram-desktop
+sudo pacman -S --noconfirm jdk-openjdk chromium ranger qbittorrent vlc telegram-desktop shotwell
 
 # Install AUR Stuff
-yay -S --noconfirm visual-studio-code-bin pamac-aur
-
-#Shotwell
-sudo pacman -S --noconfirm shotwell
-
-# Spotify
-sudo pacman -S --noconfirm gtk-engine-murrine
-yay -S --noconfirm --needed spotify-dev
+yay -S --noconfirm visual-studio-code-bin pamac-aur xdman spotify-dev android-studio
 
 # Install ZSH
 sudo cp .zshrc $HOME
