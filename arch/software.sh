@@ -2,11 +2,11 @@
 
 echo "################### WELCOME TO SOFTWARE INSTALLATION SCRIPT #########################"
 
-# Install PACMAN Modules
-sudo pacman -S --noconfirm ranger qbittorrent vlc telegram-desktop gnome-tweaks chrome-gnome-shell
+# Install Pacman Stuff
+sudo pacman -S --noconfirm chromium ranger qbittorrent vlc telegram-desktop
 
-# Install AUR Modules
-yay -S --noconfirm brave-bin visual-studio-code-bin teams pamac-aur
+# Install AUR Stuff
+yay -S --noconfirm visual-studio-code-bin pamac-aur
 
 #Shotwell
 sudo pacman -S --noconfirm shotwell
@@ -16,8 +16,7 @@ sudo pacman -S --noconfirm gtk-engine-murrine
 yay -S --noconfirm --needed spotify-dev
 
 # Install ZSH
-sudo pacman -S zsh zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions zsh-theme-powerlevel10k  --noconfirm
-sudo cp .zshrc /home/$USER
+sudo cp .zshrc $HOME
 chsh -s /bin/zsh
 
 echo "Do you want to install Virt-manager? (y/n)"

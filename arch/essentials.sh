@@ -24,11 +24,8 @@ echo "Installing Pip3"
 sudo pacman -S --noconfirm python-pip
 
 #Install essential fonts
-sudo pacman -S --noconfirm ttf-droid ttf-bitstream-vera evolution-data-server ttf-liberation noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-fira-sans ttf-fira-mono
+sudo pacman -S --noconfirm  noto-fonts-extra ttf-fira-sans ttf-fira-mono
 yay -S --noconfirm --needed nerd-fonts-terminus nerd-fonts-hack
-
-#Hardware Drivers
-sudo pacman -S --noconfirm libva-utils intel-media-driver libva-intel-driver libva-mesa-driver
 
 # Pulseaudio improvements
 sudo sed -i 's/default-sample-format = s16le/default-sample-format = float32le/g' /etc/pulse/daemon.conf
@@ -50,8 +47,6 @@ sudo echo "keyserver pool.sks-keyservers.net" > $HOME/.gnupg/gpg.conf
 
 #Printing
 sudo pacman -S --noconfirm cups hplip
-sudo systemctl enable org.cups.cupsd.service
-sudo systemctl start org.cups.cupsd.service
 
 #Pulseaudio Bluetooth Module
 #sudo pacman -R pulseaudio-bluetooth    #This default module conflicts with the new module
