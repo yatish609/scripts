@@ -41,16 +41,8 @@ git config --global user.email "yatishbhardwaj1@gmail.com"
 git config --global user.name "Yatish Bhardwaj"
 git config --global credential.helper store
 
-# Keyserver
-mkdir $HOME/.gnupg
-sudo echo "keyserver pool.sks-keyservers.net" > $HOME/.gnupg/gpg.conf
-
 #Printing
 sudo pacman -S --noconfirm cups hplip
-
-#Pulseaudio Bluetooth Module
-#sudo pacman -R pulseaudio-bluetooth    #This default module conflicts with the new module
-yay -S pulseaudio-modules-bt
 
 echo "################# SOFTWARE ####################"
 
